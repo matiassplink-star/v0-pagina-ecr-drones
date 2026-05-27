@@ -3,15 +3,15 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Cursos", href: "#cursos" },
-  { label: "Benefícios", href: "#beneficios" },
-  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "O Desafio", href: "#desafio" },
+  { label: "A Solução", href: "#solucao" },
+  { label: "Comparativo", href: "#comparativo" },
+  { label: "Método", href: "#metodo" },
   { label: "Contato", href: "#contato" },
 ]
 
@@ -48,9 +48,18 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
-              Matricule-se
+          <div className="hidden lg:flex items-center gap-4">
+            <a 
+              href="https://wa.me/5534988056752" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-[#25D366] transition-colors"
+            >
+              <Phone className="h-4 w-4" />
+              (34) 9.8805-6752
+            </a>
+            <Button className="bg-[#E07B00] hover:bg-[#E07B00]/90 text-white font-semibold px-6" asChild>
+              <a href="#contato">Solicitar Orçamento</a>
             </Button>
           </div>
 
@@ -82,8 +91,17 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold mt-4">
-                Matricule-se
+              <a 
+                href="https://wa.me/5534988056752" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-base font-medium text-[#25D366] py-2"
+              >
+                <Phone className="h-5 w-5" />
+                (34) 9.8805-6752
+              </a>
+              <Button className="bg-[#E07B00] hover:bg-[#E07B00]/90 text-white font-semibold mt-4" asChild>
+                <a href="#contato" onClick={() => setIsMenuOpen(false)}>Solicitar Orçamento</a>
               </Button>
             </nav>
           </div>

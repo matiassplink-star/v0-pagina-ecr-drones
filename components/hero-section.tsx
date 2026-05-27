@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Play, ArrowRight } from "lucide-react"
+import { ArrowRight, Phone } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -23,35 +23,34 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
             <span className="w-2 h-2 bg-[#E07B00] rounded-full animate-pulse" />
-            <span className="text-sm text-white/90 font-medium">Matrículas Abertas 2026</span>
+            <span className="text-sm text-white/90 font-medium">Tecnologia de Precisão Flutuante</span>
           </div>
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            <span className="text-balance">Seja um</span>{" "}
-            <span className="text-[#E07B00]">Piloto de Drone</span>{" "}
-            <span className="text-balance">Agrícola Certificado</span>
+            <span className="text-balance">Pulverização com</span>{" "}
+            <span className="text-[#E07B00]">Drone de Alta Capacidade</span>
           </h1>
 
           {/* Description */}
           <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-xl">
-            Capacitação completa em operação de drones para agricultura de precisão. 
-            Aprenda com especialistas e transforme sua carreira no agronegócio.
+            Com os drones XAG P100PRO de 52 litros, a ECR DRONES entrega aplicação rápida, 
+            precisa e eficiente. Amassamento zero é lucro direto no silo.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap gap-8 mb-10">
             <div>
-              <p className="text-3xl sm:text-4xl font-bold text-white">500+</p>
-              <p className="text-sm text-white/70">Alunos Formados</p>
+              <p className="text-3xl sm:text-4xl font-bold text-white">10-30</p>
+              <p className="text-sm text-white/70">Hectares/hora</p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl font-bold text-white">98%</p>
-              <p className="text-sm text-white/70">Aprovação</p>
+              <p className="text-3xl sm:text-4xl font-bold text-white">52L</p>
+              <p className="text-sm text-white/70">Capacidade</p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl font-bold text-white">50h</p>
-              <p className="text-sm text-white/70">Prática de Voo</p>
+              <p className="text-3xl sm:text-4xl font-bold text-white">0%</p>
+              <p className="text-sm text-white/70">Amassamento</p>
             </div>
           </div>
 
@@ -60,17 +59,23 @@ export function HeroSection() {
             <Button 
               size="lg" 
               className="bg-[#E07B00] hover:bg-[#E07B00]/90 text-white font-semibold px-8 py-6 text-base"
+              asChild
             >
-              Quero me Matricular
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <a href="#contato">
+                Solicitar Orçamento
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white font-semibold px-8 py-6 text-base backdrop-blur-sm"
+              asChild
             >
-              <Play className="mr-2 h-5 w-5" />
-              Ver Vídeo
+              <a href="https://wa.me/5534988056752" target="_blank" rel="noopener noreferrer">
+                <Phone className="mr-2 h-5 w-5" />
+                (34) 9.8805-6752
+              </a>
             </Button>
           </div>
         </div>
